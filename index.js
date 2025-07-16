@@ -1,5 +1,5 @@
-const {Client, Collection, Events, GatewayIntentBits} = require('discord.js');
-const client = new Client({intents: [GatewayIntentBits.Guilds]});
+const {Client, Collection, GatewayIntentBits} = require('discord.js');
+const client = new Client({intents: 53608447});
 const fs = require('node:fs');
 const path = require('node:path');
 require('dotenv').config()
@@ -7,8 +7,9 @@ require('dotenv').config()
 //colections for handlers
 client.commands = new Collection();
 client.events = new Collection();
+client.prefixcommands = new Collection();
 
-//handles first commands, second events.
+//handles first commands, second events, third prefix commands.
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
 for(const folder of commandFolders){
@@ -31,9 +32,21 @@ for(const file of eventFiles){
     const filePath = path.join(eventsPath, file);
     const event = require(filePath);
     if (event.once) {
-        client.once(event.name, (...args) => event.execute(...args));
+        client.once(event.name, (...args) => event.execute(client, ...args));
     }else{
-        client.on(event.name, (...args) => event.execute(...args));
+        client.on(event.name, (...args) => event.execute(client, ...args));
+    }
+};
+
+const prefixFolderPath = path.join(__dirname, "prefixCommands");
+const prefixFolders = fs.readdirSync(prefixFolderPath);
+for (folder of prefixFolders) {
+    const commandsPath = path.join(prefixFolderPath, folder);
+    const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+    for(const file of commandFiles){
+        const filePath = path.join(commandsPath, file);
+        const command = require(filePath);
+        client.prefixcommands.set(command.name, command);
     }
 };
 
