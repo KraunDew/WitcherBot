@@ -8,7 +8,7 @@ module.exports = {
 
     if (!command) {
       await interaction.reply(
-        `The command ${interaction.commandName} don't exists, try use /help`
+        `The command ${interaction.commandName} don't exists, try use \`/help\``
       );
     } else {
       try {
