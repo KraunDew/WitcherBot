@@ -21,7 +21,7 @@ WitcherBot soporta dos métodos de interacción:
 - Comandos como play, skip, queue, volume, pause, etc.
 - Control vía comandos o panel web (próximamente).
 
-### 🪙 Economía Virtual
+### 🤑 Economía Virtual
 - Sistema de monedas, trabajos, niveles y recompensas.
 - Tienda, perfil de usuario, e inventario.
 - Interacciones sociales (donar, robar, apostar).
