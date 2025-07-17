@@ -4,11 +4,24 @@
 
 ---
 
+## Tabla de Contenido
+
+- [🚀 Características principales](#-características-principales)
+  - [🔧 Comandos con prefijo y Slash Commands](#-comandos-con-prefijo-y-slash-commands)
+  - [🛡️ Administración](#-administración)
+  - [🎵 Música](#-música)
+  - [🤑 Economía Virtual](#-economía-virtual)
+  - [🎲 Entretenimiento](#-entretenimiento)
+- [🌐 Panel Web](#-panel-web)
+- [⚙️ Tecnologías utilizadas](#-tecnologías-utilizadas)
+
+---
+
 ## 🚀 Características principales
 
 ### 🔧 Comandos con prefijo y Slash Commands
 WitcherBot soporta dos métodos de interacción:
-- **Prefijos personalizados**, definidos por servidor.
+- **Prefijos personalizados**, definidos por servidor (Por defecto se usa el prefijo <<).
 - **Slash commands (`/`)**, registrados dinámicamente con Discord API para mejor integración y UX.
 
 ### 🛡️ Administración
