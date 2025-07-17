@@ -29,7 +29,7 @@ module.exports = {
           );
 
         if (!cmd) {
-          await message.reply("This command don't exists, try use `/help`");
+          await message.reply(`This command don't exists, try use ***\`${prefix}help\`***`);
         } else {
           try {
             cmd.execute(client, message, args, db);

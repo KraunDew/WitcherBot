@@ -6,7 +6,7 @@ module.exports = {
             let prefix = args[0];
 
             db.collection('guilds').doc(message.guild.id).update({prefix}).then(() => {
-                return message.reply(`Prefix has been set to ${prefix}`);
+                return message.reply(`Prefix has been set to \`***${prefix}***\``);
             });
         } else {
             return await message.reply("Missing prefix");
