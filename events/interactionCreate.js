@@ -1,4 +1,5 @@
 const { Events, MessageFlags } = require("discord.js");
+const db = require("../index.js");
 
 module.exports = {
   name: Events.InteractionCreate,
@@ -13,7 +14,7 @@ module.exports = {
     });
     } else {
       try {
-        await command.execute(client, interaction);
+        await command.execute(client, interaction, db);
       } catch (error) {
         console.error(error);
       }
