@@ -1,6 +1,6 @@
 module.exports = {
     name: "ping",
-    aliases: "p",
+    aliases: ["p"],
     async execute(client, message, args){
         message.reply("Pong")
     }

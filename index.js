@@ -4,6 +4,19 @@ const fs = require('node:fs');
 const path = require('node:path');
 require('dotenv').config()
 
+//conect to firebase
+const firebase = require('firebase/app');
+const fieldValue = require('firebase-admin').firestore.FieldValue;
+const admin = require('firebase-admin');
+const serviceAccount = require('./serviceAccount.json');
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+module.exports = db
+
 //colections for handlers
 client.commands = new Collection();
 client.events = new Collection();
