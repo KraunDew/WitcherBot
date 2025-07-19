@@ -10,6 +10,7 @@ module.exports = {
             'guildOwner': guild.ownerId,
             'guildIcon': guild.iconURL(),
             'prefix': process.env.PREFIX,
+            'lang': 'en'
         });
     }
 }
