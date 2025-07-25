@@ -1,0 +1,26 @@
+{
+  "name": "botdiscord",
+  "version": "1.0.0",
+  "description": "WitcherBot es un bot multifuncional para Discord, diseñado con un enfoque modular y extensible. Su objetivo es ofrecer una solución todo en uno para la administración de servidores, entretenimiento de comunidades, gestión económica virtual y más.",
+  "main": "index.js",
+  "scripts": {
+    "run": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@iamtraction/google-translate": "^2.0.1",
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.2",
+    "firebase": "^12.0.0",
+    "firebase-admin": "^13.4.0",
+    "nodemon": "^3.1.10",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4",
+    "poru": "^5.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+# Ignorar el archivo de credenciales y el .env
+server/bot/config/
+.env
+
+# Carpetas y archivos comunes a ignorar
+/node_modules
+/.vscode
+/.idx
+npm-debug.log*
+
