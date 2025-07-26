@@ -10,6 +10,7 @@ const serviceAccount = require("./config/serviceAccount.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://witcherbot-c04d0-default-rtdb.firebaseio.com"
 });
 
 const db = admin.firestore();
