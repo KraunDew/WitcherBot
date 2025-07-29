@@ -60,7 +60,7 @@ WitcherBot contará con un **dashboard web** que permitirá:
 ## ⚙️ Tecnologías utilizadas
 
 - **Node.js** + **Discord.js**: Núcleo del bot y manejo de interacciones con Discord.
-- **dotenv**: Gestión segura de variables de entorno.
 - **firebase** y **firebase-admin**: Base de datos NoSQL y servicios de backend.
 - **@iamtraction/google-translate** para funcionalidades de traducción.
 - **poru** para la reproducción de música.
+- **express** + **passport**: para la creacion del servidor web y el inicio de sesion con Discord
