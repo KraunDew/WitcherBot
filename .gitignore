@@ -1,6 +1,6 @@
 # Ignorar el archivo de credenciales y el .env
 .env
-./serviceAccount.json
+serviceAccount.json
 /server/bot/config
 # Carpetas y archivos comunes a ignorar
 /node_modules
