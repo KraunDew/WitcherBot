@@ -16,7 +16,7 @@ passport.use(new Strategy({
     scope: ["identify", "guilds"]
 }, (a ,r ,profile, cb) => {
     process.nextTick(() => {
-        return cb(null, profile)
+        cb(null, profile)
     })
 }))
 

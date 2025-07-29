@@ -46,7 +46,7 @@
 
 ---
 
-## 🌐 Panel Web
+## 🌐 [Panel Web](https://witcherbot.up.railway.app/login)
 
 WitcherBot contará con un **dashboard web** que permitirá:
 - Gestionar módulos y configuración por servidor.

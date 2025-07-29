@@ -1,13 +1,15 @@
 const { Router } = require("express");
 const passport = require("../server/passport.js");
 const { auth } = require("../util/middleware/auth");
-const { user } = require("../server/bot/index.js");
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.send("ok");
+  res.render("home", {
+    title: "WitcherBot",
+    user: req.user
+  });
 });
-router.get("/login", passport.authenticate("discord"), (req, res) => {
+router.get("/login", passport.authenticate("discord", {failureRedirect: "/"}), (req, res) => {
   res.redirect("/dashboard");
 });
 router.get("/dashboard", auth, (req, res) => {
@@ -30,6 +32,7 @@ router.get("/dashboard/:id", auth, (req, res) => {
   let servidor = req.botClient.guilds.cache.get(req.params.id);
   let canales = servidor.channels.cache;
   res.render("dash", {
+    title: `WitcherBot || ${servidor.name}`,
     user: req.user,
     servidor,
     canales,

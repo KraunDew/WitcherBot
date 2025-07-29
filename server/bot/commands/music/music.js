@@ -66,7 +66,7 @@ module.exports = {
         `🔮🧙🏻‍♂️***You need to be in a voice channel to use this command***`,
         { to: lang }
       ).then((res) =>
-        interaction.editReply({ content: res.text, ephemeral: true })
+        interaction.reply({ content: res.text})
       );
     switch (interaction.options.getSubcommand()) {
       case "play":
@@ -141,7 +141,7 @@ module.exports = {
             .setTimestamp();
 
           await interaction.editReply({ embeds: [embed] });
-          if (!player.isPlaying && !player.isPaused) return player.play();
+          if (!player.isPlaying && !player.isPaused) return player.play(tracks[0]);
         } else {
           const track = tracks.shift();
           track.info.requester = interaction.member;
@@ -185,7 +185,7 @@ module.exports = {
             .setTimestamp();
 
           await interaction.editReply({ embeds: [embed] });
-          if (!player.isPlaying && !player.isPaused) return player.play();
+          if (!player.isPlaying && !player.isPaused) return player.play(track);
         }
         break;
       case "stop":

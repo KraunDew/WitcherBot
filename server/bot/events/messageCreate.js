@@ -1,5 +1,5 @@
 const { Events } = require("discord.js");
-const db = require("../index.js");
+const db = require("../../../index.js");
 const translate = require("@iamtraction/google-translate");
 
 module.exports = {
