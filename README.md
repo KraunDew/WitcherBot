@@ -6,6 +6,8 @@
 
 ## Tabla de Contenido
 
+## Tabla de Contenido
+
 - [🚀 Características principales](#-características-principales)
   - [🔧 Comandos con prefijo y Slash Commands](#-comandos-con-prefijo-y-slash-commands)
   - [🛡️ Administración](#-administración)
@@ -13,8 +15,12 @@
   - [🤑 Economía Virtual](#-economía-virtual)
   - [🎲 Entretenimiento](#-entretenimiento)
 - [🌐 Panel Web](#-panel-web)
-- [⚙️ Tecnologias utilizadas](#%EF%B8%8F-tecnologías-utilizadas)
-  - [🧑‍💻 NPM](#-npm)
+- [⚙️ Tecnologías utilizadas](#%EF%B8%8Ftecnologías-utilizadas)
+  - [🧑‍💻 Backend y Bot](#%E2%80%8D-backend-y-bot)
+  - [☁️ Base de datos y servicios](#-base-de-datos-y-servicios)
+  - [🌍 Funcionalidades extra](#-funcionalidades-extra)
+  - [🌐 Servidor web y autenticación](#-servidor-web-y-autenticación)
+  - [🎨 Estilos y frontend](#-estilos-y-frontend)
 
 ---
 
@@ -59,11 +65,21 @@ WitcherBot contará con un **dashboard web** que permitirá:
 ---
 
 ## ⚙️ Tecnologías utilizadas
-### 🧑‍💻 NPM
-- - **Node.js** + **Discord.js**: Núcleo del bot y manejo de interacciones con Discord.
-- - **firebase** y **firebase-admin**: Base de datos NoSQL y servicios de backend.
-- - **@iamtraction/google-translate** para funcionalidades de traducción.
-- - **poru** para la reproducción de música.
-- - **express** + **passport**: para la creacion del servidor web y el inicio de sesion con Discord
-### Railway
-Para convertir el servidor en unos estatico, y asi poder subirlo a la nube
+### 🧑‍💻 Backend y Bot
+- Node.js + Discord.js → Núcleo del bot y conexión con la API de Discord.
+- dotenv → Manejo seguro de variables de entorno.
+- nodemon → Recarga automática en desarrollo.
+### ☁️ Base de datos y servicios
+- firebase + firebase-admin → Base de datos NoSQL y servicios de backend en la nube.
+### 🌍 Funcionalidades extra
+- @iamtraction/google-translate → Traducción de mensajes en tiempo real.
+- poru → Cliente Lavalink para reproducción de música.
+### 🌐 Servidor web y autenticación
+- express → Framework para crear el servidor web.
+- express-handlebars → Motor de plantillas para las vistas.
+- express-session → Manejo de sesiones de usuario.
+- passport + passport-discord → Autenticación OAuth2 con Discord.
+### 🎨 Estilos y frontend
+- tailwindcss → Framework de estilos CSS.
+- @tailwindcss/cli → Herramienta de compilación de Tailwind.
+- @tailwindplus/elements → Componentes listos para usar con Tailwind.
