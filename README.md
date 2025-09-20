@@ -17,7 +17,7 @@
 - [🌐 Panel Web](#-panel-web)
 - [⚙️ Tecnologías utilizadas](#%EF%B8%8F-tecnologías-utilizadas)
   - [🧑‍💻 Backend y Bot](#%E2%80%8D-backend-y-bot)
-  - [☁️ Base de datos y servicios](#-base-de-datos-y-servicios)
+  - [☁️ Base de datos y servicios](#%EF%B8%8F-base-de-datos-y-servicios)
   - [🌍 Funcionalidades extra](#-funcionalidades-extra)
   - [🌐 Servidor web y autenticación](#-servidor-web-y-autenticación)
   - [🎨 Estilos y frontend](#-estilos-y-frontend)
