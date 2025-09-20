@@ -10,28 +10,29 @@ function formatTime(ms) {
 
 module.exports.execute = async (client, player) => {
   const lastTrack = player.previousTrack;
+  const lastRequester = lastTrack.info.requester;
   if (!lastTrack) return;
-  const query = lastTrack.info.title;
+  const query = `https://www.youtube.com/watch?v=${lastTrack.info.identifier}&list=RD${lastTrack.info.identifier}`;
 
   const result = await client.poru.resolve({
-    query: `ytmsearch:${query}`,
+    query,
     source: "ytmsearch",
-    requester: client.user,
+    requester: lastRequester || client.user,
   });
 
-  if (!result || result.loadType !== "search" || !result.tracks.length) return;
+  if (!result || !result.tracks.length) return;
 
-  const nextTrack = result.tracks[1] || result.tracks[0];
-  nextTrack.info.requester = client.user;
+  const nextTrack = result.tracks.find((t) => t.info.identifier !== lastTrack.info.identifier) || result.tracks[0];
+  nextTrack.info.requester = lastRequester || client.user;
   player.queue.add(nextTrack);
   player.play();
 
   const channel = client.channels.cache.get(player.textChannel);
   const lang = await (client.db).data().lang;
-  let title = await translate(`***Added Song to queue***`, {
+  let title = await translate(`***Una sugerencia magica***`, {
     to: lang,
   });
-  let description = await translate(`🔮🧙🏻‍♂️Added song to the queue`, {
+  let description = await translate(`🔮🧙🏻‍♂️Canción añadida por mi magia`, {
     to: lang,
   });
   let field1 = await translate(`Duration`, { to: lang });

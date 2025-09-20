@@ -65,3 +65,5 @@ WitcherBot contará con un **dashboard web** que permitirá:
 - - **@iamtraction/google-translate** para funcionalidades de traducción.
 - - **poru** para la reproducción de música.
 - - **express** + **passport**: para la creacion del servidor web y el inicio de sesion con Discord
+### Railway
+Para convertir el servidor en unos estatico, y asi poder subirlo a la nube

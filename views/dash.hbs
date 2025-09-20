@@ -1,1 +1,28 @@
-<h1>Servidor {{servidor.name}}</h1>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-4">
+{{#each servers}}
+  {{#if this.status}}
+    <div class="order-first">
+      {{else}}
+      <div class="order-last">
+      {{/if}}
+      <article class="border border-violet-400 rounded-lg shadow-violet-600 overflow-hidden dark:bg-zinc-700">
+        {{#if this.icon}}
+        <img
+          src="https://cdn.discordapp.com/icons/{{this.id}}/{{this.icon}}.png"
+          class="w-full"
+          alt="{{this.name}}"
+        />
+        {{else}}
+        <img class="w-full" src="https://lh4.googleusercontent.com/proxy/Ew00EaasToMUW6ino99oQZJMvNGaLFpJS5BMAigyRXSHJBvk5MTevpfnirEiwY7aVDrnRLFF3Ug6xKBjpKP3f0XCJjtaeKEwQ7Z_k4iE8iMfrI5tQtKQLc0lpRTWuV7ptsNdVxNzRWc5WOt7DTNb7CE" alt="{{this.name}}">
+        {{/if}}
+        <div class="p-4">
+            <p class="dark:text-white text-lg">{{this.name}}</p>
+            {{#if this.status}}
+                <button><a class="mt-4 dark:text-white inline-block rounded dark:bg-violet-700 dark:hover:bg-violet-500 hover:bg-violet-700 bg-violet-500 p-2" href="/dashboard/{{this.id}}">Config Server</a></button>
+            {{else}}
+                <button><a class="mt-4 dark:text-white inline-block rounded dark:bg-emerald-700 dark:hover:bg-emerald-500 hover:bg-emerald-700 bg-emerald-500 p-2" href="https://discord.com/oauth2/authorize?client_id=1099725174280048741&permissions=8&integration_type=0&scope=bot+applications.commands">Invite</a></button>
+            {{/if}}
+        </div>      
+      </article>
+    </div>
+{{/each}}

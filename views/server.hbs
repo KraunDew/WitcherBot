@@ -1,0 +1,7 @@
+<img href="https://cdn.discordapp.com/icons/{{servidor.id}}/{{servidor.icon}}.png" />
+<h1 class="dark:text-white text-3xl m-2">Servidor {{servidor.name}}</h1>
+
+<form action="/dashboard/{{servidor.id}}/prefix" method="post">
+<input type="text" name="prefix" id="prefix">
+<button type="submit">Cambiar prefix</button>
+</form>
